@@ -43,5 +43,12 @@
         "components"
     ],
     "author": "Broad Institute",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/broadinstitute/liverkp-assets",
+        "directory": "packages/vue"
+    },
+    "homepage": "https://github.com/broadinstitute/liverkp-assets#readme",
+    "bugs": "https://github.com/broadinstitute/liverkp-assets/issues"
 }

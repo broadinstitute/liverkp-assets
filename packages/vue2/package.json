@@ -43,5 +43,12 @@
     ],
     "author": "Broad Institute",
     "license": "BSD-3-Clause",
-    "deprecated": "This package targets Vue 2.7+. Migrate to @liverkp/vue (Vue 3) when possible."
+    "deprecated": "This package targets Vue 2.7+. Migrate to @liverkp/vue (Vue 3) when possible.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/broadinstitute/liverkp-assets",
+        "directory": "packages/vue2"
+    },
+    "homepage": "https://github.com/broadinstitute/liverkp-assets#readme",
+    "bugs": "https://github.com/broadinstitute/liverkp-assets/issues"
 }

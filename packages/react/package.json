@@ -49,6 +49,9 @@
     "license": "BSD-3-Clause",
     "repository": {
         "type": "git",
-        "url": "https://github.com/nih-cfde/liverkp-assets"
-    }
+        "url": "https://github.com/broadinstitute/liverkp-assets",
+        "directory": "packages/react"
+    },
+    "homepage": "https://github.com/broadinstitute/liverkp-assets#readme",
+    "bugs": "https://github.com/broadinstitute/liverkp-assets/issues"
 }
