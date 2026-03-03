@@ -1,0 +1,47 @@
+{
+    "name": "@liverkp/vue",
+    "version": "0.1.0",
+    "description": "Vue 3 components for Liver Knowledge Portal",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite build --watch"
+    },
+    "peerDependencies": {
+        "vue": "^3.3.0"
+    },
+    "dependencies": {
+        "@liverkp/core": "workspace:*"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.0",
+        "@vue/tsconfig": "^0.5.0",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.0",
+        "vite-plugin-dts": "^3.7.0",
+        "vue": "^3.4.0",
+        "vue-tsc": "^1.8.27"
+    },
+    "keywords": [
+        "liverkp",
+        "vue",
+        "vue3",
+        "components"
+    ],
+    "author": "Broad Institute",
+    "license": "BSD-3-Clause"
+}

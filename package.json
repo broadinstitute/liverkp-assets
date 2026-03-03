@@ -1,0 +1,27 @@
+{
+    "name": "@liverkp/monorepo",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "description": "Shared portal components for Liver Knowledge Portal teams",
+    "scripts": {
+        "build": "pnpm --filter @liverkp/core build && pnpm --filter \"@liverkp/vue*\" --filter \"@liverkp/react\" build",
+        "build:core": "pnpm --filter @liverkp/core build",
+        "build:vue": "pnpm --filter @liverkp/vue build",
+        "build:vue2": "pnpm --filter @liverkp/vue2 build",
+        "build:react": "pnpm --filter @liverkp/react build",
+        "clean": "pnpm -r exec -- Remove-Item -Path dist -Recurse -Force -ErrorAction SilentlyContinue",
+        "typecheck": "pnpm -r exec -- tsc --noEmit"
+    },
+    "keywords": [
+        "liverkp",
+        "portal",
+        "components",
+        "shared"
+    ],
+    "author": "Broad Institute",
+    "license": "BSD-3-Clause",
+    "devDependencies": {
+        "typescript": "^5.3.3"
+    }
+}

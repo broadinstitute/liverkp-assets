@@ -1,0 +1,88 @@
+/**
+ * Layout utilities using flexbox
+ * All classes prefixed with .lkp-
+ */
+
+.lkp-app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.lkp-f-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+}
+
+.lkp-f-row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+}
+
+.lkp-f-col.lkp-align-v-center {
+    justify-content: center;
+}
+
+.lkp-f-row.lkp-align-v-center {
+    align-items: center;
+}
+
+.lkp-f-col.lkp-align-h-center {
+    align-items: center;
+}
+
+.lkp-f-row.lkp-align-h-center {
+    justify-content: center;
+}
+
+.lkp-f-col.lkp-align-v-bottom {
+    justify-content: flex-end;
+}
+
+.lkp-f-row.lkp-align-v-bottom {
+    align-items: flex-end;
+}
+
+.lkp-f-col.lkp-align-h-bottom {
+    align-items: flex-end;
+}
+
+.lkp-f-row.lkp-align-h-bottom {
+    justify-content: flex-end;
+}
+
+.lkp-f-row.lkp-align-right {
+    justify-content: flex-end;
+}
+
+.lkp-f-col.lkp-spread-out,
+.lkp-f-row.lkp-spread-out {
+    justify-content: space-between;
+}
+
+.lkp-fill-height {
+    height: 100%;
+}
+
+.lkp-fill-width {
+    width: 100%;
+}
+
+.lkp-hug-height {
+    height: fit-content;
+}
+
+.lkp-hug-width {
+    width: fit-content;
+}
+
+.lkp-grow-children > * {
+    flex: 1;
+}
+
+.lkp-fill-children > * {
+    flex: 1;
+}

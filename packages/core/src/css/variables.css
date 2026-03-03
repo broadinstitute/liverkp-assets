@@ -1,0 +1,21 @@
+/**
+ * CSS Custom Properties for Liver Knowledge Portal
+ * All variables prefixed with --lkp-
+ */
+
+:root {
+    /* Brand Colors */
+    --lkp-blue: #2c5d8b;
+    --lkp-lite-blue: #4681b9;
+
+    /* Shadows */
+    --lkp-nav-shadow:
+        rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    --lkp-foot-shadow:
+        inset rgba(50, 50, 93, 1) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    /* Sizes */
+    --lkp-hamburger-size: clamp(14px, 10vmin, 26px);
+}

@@ -1,0 +1,49 @@
+{
+    "name": "@liverkp/core",
+    "version": "0.1.0",
+    "description": "Core CSS, types, and assets for Liver Knowledge Portal shared components",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./css": "./dist/css/index.css",
+        "./assets": {
+            "types": "./dist/assets.d.ts",
+            "import": "./dist/assets.js",
+            "require": "./dist/assets.cjs"
+        },
+        "./types": {
+            "types": "./dist/types.d.ts"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "vite build && tsc --emitDeclarationOnly --outDir dist",
+        "dev": "vite build --watch"
+    },
+    "keywords": [
+        "liverkp",
+        "portal",
+        "css",
+        "design-system"
+    ],
+    "author": "Broad Institute",
+    "license": "BSD-3-Clause",
+    "devDependencies": {
+        "typescript": "^5.3.3",
+        "vite": "^5.0.0",
+        "vite-plugin-dts": "^3.7.0"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "name": "@liverkp/react",
+    "version": "0.1.0",
+    "description": "React components for Liver Knowledge Portal",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "vite build",
+        "typecheck": "tsc --noEmit"
+    },
+    "peerDependencies": {
+        "react": "^18.0.0 || ^19.0.0",
+        "react-dom": "^18.0.0 || ^19.0.0"
+    },
+    "dependencies": {
+        "@liverkp/core": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.48",
+        "@types/react-dom": "^18.2.18",
+        "@vitejs/plugin-react": "^4.2.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.11",
+        "vite-plugin-dts": "^3.7.0"
+    },
+    "keywords": [
+        "react",
+        "liver",
+        "knowledge",
+        "portal",
+        "header",
+        "footer",
+        "navigation"
+    ],
+    "license": "BSD-3-Clause",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nih-cfde/liverkp-assets"
+    }
+}

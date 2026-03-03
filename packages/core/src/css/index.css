@@ -1,0 +1,13 @@
+/**
+ * @liverkp/core - Main CSS entry point
+ * Imports all CSS modules in the correct order
+ */
+
+/* 1. CSS Custom Properties first */
+@import "./variables.css";
+
+/* 2. Layout utilities */
+@import "./layout.css";
+
+/* 3. Component styles */
+@import "./components.css";

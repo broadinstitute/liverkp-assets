@@ -1,0 +1,15 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "paths": {},
+        "outDir": "./dist",
+        "declaration": true,
+        "declarationMap": true,
+        "jsx": "preserve",
+        "jsxImportSource": "vue",
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true
+    },
+    "include": ["src/**/*", "src/**/*.vue"],
+    "exclude": ["node_modules", "dist"]
+}
