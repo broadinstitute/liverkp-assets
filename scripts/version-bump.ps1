@@ -16,7 +16,7 @@ Write-Host "🔢 Bumping $BumpType version for all packages..." -ForegroundColor
 foreach ($pkg in $packages) {
     $path = "packages\$pkg"
     Write-Host "`nUpdating @liverkp/$pkg..." -ForegroundColor Yellow
-    
+
     Push-Location $path
     try {
         npm version $BumpType --no-git-tag-version

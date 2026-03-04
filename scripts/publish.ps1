@@ -35,10 +35,10 @@ Write-Host "✓ Build succeeded" -ForegroundColor Green
 # Publish function
 function Publish-Package {
     param($PackageName, $Path)
-    
+
     Write-Host "`n📤 Publishing $PackageName..." -ForegroundColor Yellow
     Push-Location $Path
-    
+
     try {
         if ($DryRun) {
             npm publish --access public --dry-run

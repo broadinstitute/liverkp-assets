@@ -4,3 +4,6 @@
 
 // Re-export all types
 export * from "./types";
+
+// Re-export standardized menu
+export { menuItems, topMenuItems } from "./menu";

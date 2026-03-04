@@ -1,6 +1,11 @@
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import { resolve } from "path";
+
+function fromHere(relativePath: string): string {
+    const filePath = new URL(relativePath, import.meta.url).pathname;
+    // URL pathname on Windows starts with /C:/..., convert to C:/... for Rollup.
+    return filePath.replace(/^\/([A-Za-z]:\/)/, "$1");
+}
 
 export default defineConfig({
     plugins: [
@@ -13,10 +18,11 @@ export default defineConfig({
     build: {
         lib: {
             entry: {
-                index: resolve(__dirname, "src/index.ts"),
-                assets: resolve(__dirname, "src/assets.ts"),
-                types: resolve(__dirname, "src/types.ts"),
-                "css-entry": resolve(__dirname, "src/css-entry.ts"),
+                index: fromHere("./src/index.ts"),
+                assets: fromHere("./src/assets.ts"),
+                menu: fromHere("./src/menu.ts"),
+                types: fromHere("./src/types.ts"),
+                "css-entry": fromHere("./src/css-entry.ts"),
             },
             formats: ["es", "cjs"],
             fileName: (format, entryName) => {

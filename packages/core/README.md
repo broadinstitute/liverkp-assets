@@ -5,11 +5,13 @@ Foundation package providing CSS, TypeScript types, and image assets for Liver K
 ## 📦 Installation
 
 Using **pnpm**:
+
 ```bash
 pnpm add @liverkp/core
 ```
 
 Using **npm**:
+
 ```bash
 npm install @liverkp/core
 ```
@@ -21,10 +23,11 @@ npm install @liverkp/core
 Import the complete CSS bundle in your app entry point:
 
 ```typescript
-import '@liverkp/core/css';
+import "@liverkp/core/css";
 ```
 
 This includes:
+
 - CSS custom properties (brand colors, shadows, sizes)
 - Layout utilities (flexbox classes)
 - Component styles (header, footer, navigation)
@@ -33,17 +36,17 @@ This includes:
 
 ```typescript
 import type {
-  HeaderConfig,
-  FooterConfig,
-  NavMenuItem,
-  TopMenuItem,
-  Logo,
-  Institution,
-  FooterColumn
-} from '@liverkp/core';
+    HeaderConfig,
+    FooterConfig,
+    NavMenuItem,
+    TopMenuItem,
+    Logo,
+    Institution,
+    FooterColumn,
+} from "@liverkp/core";
 
 // Or use the /types entry point
-import type { HeaderConfig, FooterConfig } from '@liverkp/core/types';
+import type { HeaderConfig, FooterConfig } from "@liverkp/core/types";
 ```
 
 ### Asset Imports
@@ -68,16 +71,31 @@ import {
 <img src={cfdeLogo} alt="CFDE Logo" />
 ```
 
+### Standard Menu Config
+
+Import shared menu data so all consortium apps stay consistent:
+
+```typescript
+import { menuItems, topMenuItems } from "@liverkp/core/menu";
+
+// Or from the main entry
+import { menuItems, topMenuItems } from "@liverkp/core";
+```
+
+`menuItems` and `topMenuItems` are exported as read-only values.
+Update [`src/menu.json`](./src/menu.json) in this package when navigation changes.
+
 ## 📦 Exports
 
-This package provides 4 export paths:
+This package provides 5 export paths:
 
 ```json
 {
-  ".": "Types + type definitions",
-  "./css": "Complete CSS bundle",
-  "./assets": "Image URLs and SVG icons",
-  "./types": "Type definitions only"
+    ".": "Types + type definitions",
+    "./css": "Complete CSS bundle",
+    "./assets": "Image URLs and SVG icons",
+    "./menu": "Standardized menu configuration",
+    "./types": "Type definitions only"
 }
 ```
 
@@ -87,7 +105,7 @@ Available CSS custom properties:
 
 ```css
 /* Colors */
---lkp-blue: #2C5D8B;
+--lkp-blue: #2c5d8b;
 --lkp-lite-blue: #4681b9;
 
 /* Shadows */
@@ -116,13 +134,13 @@ Flexbox layout classes:
 
 ```typescript
 interface HeaderConfig {
-  logo?: Logo;
-  secondaryLogo?: Logo;
-  title?: {
-    primary: string;
-    secondary?: string;
-  };
-  topMenuItems?: TopMenuItem[];
+    logo?: Logo;
+    secondaryLogo?: Logo;
+    title?: {
+        primary: string;
+        secondary?: string;
+    };
+    topMenuItems?: TopMenuItem[];
 }
 ```
 
@@ -130,10 +148,10 @@ interface HeaderConfig {
 
 ```typescript
 interface FooterConfig {
-  description?: string;
-  columns?: FooterColumn[];
-  institutions?: Institution[];
-  copyright?: string;
+    description?: string;
+    columns?: FooterColumn[];
+    institutions?: Institution[];
+    copyright?: string;
 }
 ```
 
@@ -141,10 +159,10 @@ interface FooterConfig {
 
 ```typescript
 interface NavMenuItem {
-  label: string;
-  href?: string;
-  external?: boolean;
-  children?: NavMenuItem[];
+    label: string;
+    href?: string;
+    external?: boolean;
+    children?: NavMenuItem[];
 }
 ```
 
@@ -152,17 +170,18 @@ See [src/types.ts](./src/types.ts) for complete type definitions.
 
 ## 🖼️ Available Assets
 
-| Export | File | Description |
-|--------|------|-------------|
-| `cfdeLogo` | cfde.png | CFDE primary logo |
-| `cfdeKcLogo` | cfde_kc_logo.png | CFDE KC logo |
-| `liverLogo` | liver.png | Liver Portal logo |
-| `nihLogo` | NIH_logo.png | NIH logo |
-| `drcLogo` | DRC_logo.png | DRC logo |
-| `titleLogo` | title.png | Title logo |
-| `cfdeUnifiedIcon` | cfde_unified_icon.png | Unified icon |
+| Export            | File                  | Description       |
+| ----------------- | --------------------- | ----------------- |
+| `cfdeLogo`        | cfde.png              | CFDE primary logo |
+| `cfdeKcLogo`      | cfde_kc_logo.png      | CFDE KC logo      |
+| `liverLogo`       | liver.png             | Liver Portal logo |
+| `nihLogo`         | NIH_logo.png          | NIH logo          |
+| `drcLogo`         | DRC_logo.png          | DRC logo          |
+| `titleLogo`       | title.png             | Title logo        |
+| `cfdeUnifiedIcon` | cfde_unified_icon.png | Unified icon      |
 
 SVG icons (exported as strings):
+
 - `externalLinkIcon` - External link indicator
 - `searchIcon` - Search icon
 - `loginIcon` - Login icon
@@ -170,6 +189,7 @@ SVG icons (exported as strings):
 ## 🏗️ Build Output
 
 Vite builds this package to:
+
 - **ESM**: `dist/index.js`
 - **CJS**: `dist/index.cjs`
 - **Types**: `dist/index.d.ts`
@@ -184,4 +204,4 @@ Vite builds this package to:
 
 ## 📄 License
 
-MIT
+BSD 3-Clause License. See [LICENSE](../../LICENSE) for details.

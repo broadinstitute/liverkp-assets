@@ -1,6 +1,6 @@
 {
     "name": "@liverkp/vue2",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Vue 2.7 components for Liver Knowledge Portal (temporary - migrate to @liverkp/vue when possible)",
     "type": "module",
     "main": "./dist/index.cjs",
