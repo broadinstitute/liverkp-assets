@@ -112,6 +112,20 @@ pnpm typecheck
 pnpm clean
 ```
 
+### Storybook
+
+The React package includes a [Storybook](https://storybook.js.org/) (v10) for interactive component development and documentation.
+
+```bash
+# Start Storybook dev server on http://localhost:6006
+pnpm storybook
+
+# Build static Storybook site
+pnpm build-storybook
+```
+
+Stories are located in `packages/react/src/stories/`.
+
 ### Build Order
 
 Packages are built in dependency order:
