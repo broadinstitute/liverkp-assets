@@ -12,6 +12,8 @@
         "build:react": "pnpm --filter @liverkp/react build",
         "clean": "pnpm -r exec -- Remove-Item -Path dist -Recurse -Force -ErrorAction SilentlyContinue",
         "typecheck": "pnpm -r exec -- tsc --noEmit",
+        "storybook": "pnpm --filter @liverkp/react storybook",
+        "build-storybook": "pnpm --filter @liverkp/react build-storybook",
         "version:bump": "pwsh -File scripts/version-bump.ps1",
         "publish:dryrun": "pwsh -File scripts/publish.ps1 -DryRun",
         "publish:packages": "pwsh -File scripts/publish.ps1"
