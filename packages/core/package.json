@@ -55,7 +55,7 @@
     "bugs": "https://github.com/broadinstitute/liverkp-assets/issues",
     "devDependencies": {
         "typescript": "^5.3.3",
-        "vite": "^5.0.0",
+        "vite": "^6.4.2",
         "vite-plugin-dts": "^3.7.0"
     }
 }
